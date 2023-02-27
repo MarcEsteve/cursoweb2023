@@ -7,6 +7,19 @@ h2 {
 #titular2 {
     color:chocolate;
 }
-.titularTres{
+h3.titularTres{
     background-color:aliceblue;
+}
+
+.centrar {
+    text-align: center;
+}
+
+.rojo {
+    color: red;
+}
+
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

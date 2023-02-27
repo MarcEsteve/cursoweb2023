@@ -1,0 +1,35 @@
+a:link {
+    color: rgb(0, 255, 8);
+}
+a:visited {
+    color: green;
+}
+a:hover {
+    color: pink;
+}
+a:active {
+    color: yellow;
+}
+a.rojo:hover {
+    color: #ff0000;
+}
+div {
+    background-color: green;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+div:hover {
+    background-color: rgb(7, 188, 7);
+    border-radius: 5px;
+    color: darkblue;
+}
+
+p {
+    display:none;
+    background-color: yellow;
+    padding: 20px;
+} 
+div:hover p {
+    display: block;
+}

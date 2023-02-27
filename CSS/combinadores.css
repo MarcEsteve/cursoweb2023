@@ -1,0 +1,16 @@
+/*Todos los descendientes*/
+/* div p {
+    background-color: yellow;
+} */
+/*Todos los elementos hijos*/
+/* div > p {
+    background-color: rgb(245, 25, 205);
+} */
+/*Hermanos adyacentes*/
+/* div + p {
+    background-color: rgb(241, 109, 14);
+} */
+/* Siblings hermanos */
+div ~ p {
+    background-color: rgb(171, 82, 209);
+}
