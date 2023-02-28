@@ -1,0 +1,7 @@
+a[target] {
+    background-color: yellow;
+}
+
+a[target="_blank"] {
+    background-color: rgb(219, 31, 18);
+}
