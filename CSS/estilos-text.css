@@ -1,0 +1,33 @@
+h1 {
+    color: #1162ac;
+    font-size: 20px;
+    font-family: helvetica;
+}
+p {
+    color: chocolate;
+    font-size: 1.1em;
+    font-family: 'Roboto', sans-serif;
+    line-height: 50px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+.negritaCursiva {
+    font-weight:bold;
+    font-style:italic;
+}
+.shadow {
+    text-shadow: 1px 1px 1px #030201;
+}
+.centrado{
+    text-align:center;
+}
+div.fondoColor {
+    background-color: rgba(12,65,32,0.5);
+    padding: 20px;
+}
+.paddingPersonal{
+    padding: 50px 0px 0px 30px; 
+    /*Coordenadas arriba, derecha, abajo, izquierda*/
+    
+    background-color: cornsilk;
+}
