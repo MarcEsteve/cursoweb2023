@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>Flex Items FLEX GROW</title>
+    <title>Flex Items FLEX SHRINK</title>
     <style>
       .flex-container {
         display: flex;
@@ -21,9 +21,11 @@
   </head>
   <body>
     <div class="flex-container">
-      <div style="flex-grow: 1">1</div>
-      <div style="flex-grow: 6">6</div>
-      <div style="flex-grow: 3">3</div>
+      <div style="flex-shrink: 2">2</div>
+      <div style="flex-shrink: 1">1</div>
+      <div style="flex-shrink: 0">0</div>
+      <div>4</div>
+      <div>5</div>
     </div>
   </body>
 </html>
