@@ -17,6 +17,6 @@ var text = "";
 var i = 15;
 while (i <= 25) {
     text += "<br>El número es " + i;
-    i = i + 2;
+    i+=2;
 }
 document.getElementById("demo").innerHTML = text;
