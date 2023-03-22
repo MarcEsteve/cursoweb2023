@@ -8,7 +8,8 @@
 
     <p id="demo"></p>
     <p id="objetoComplejo"></p>
-    
+    <p id="indefinida"></p>
+    <p id="vacia"></p>
 
     <script>
       var persona = {
@@ -31,18 +32,37 @@
 
         // Atributos
         firstName: "John",
-        lastName: "Doe", 
+        lastName: "Doe",
         id: 5566,
         // Método
         fullName: function () {
-          return "El nombre es " + this.firstName + " " + this.lastName + " y su id es " + this.id;
-        }
+          return (
+            "El nombre es " +
+            this.firstName +
+            " " +
+            this.lastName +
+            " y su id es " +
+            this.id
+          );
+        },
       };
       document.getElementById("objetoComplejo").innerHTML = person.fullName();
 
       //Tipo de variable
-      console.log(typeof "John Doe") ;//El 1º devuelve string
-      console.log(typeof (3.14)); // el 2º number
+      console.log(typeof "John Doe"); //El 1º devuelve string
+      console.log(typeof 3.14); // el 2º number
+      console.log(typeof person);
+
+      //Variable indefinida (undefined)
+      var coche;
+      document.getElementById("indefinida").innerHTML =
+        coche + "<br>" + typeof coche;
+
+      //Variable VACIA
+      var car = "";
+
+      document.getElementById("vacia").innerHTML =
+        "El valor es: " + car + "<br>" + "El tipo es: " + typeof car;
     </script>
   </body>
 </html>
