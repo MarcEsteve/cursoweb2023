@@ -1,0 +1,1 @@
+console.log("Muestra un número aleatorio del [0 al 1): " + Math.random());
