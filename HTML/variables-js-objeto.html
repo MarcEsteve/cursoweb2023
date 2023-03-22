@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Variables tipo OBJETO</title>
+  </head>
+  <body>
+    <h2>JavaScript Objecto</h2>
+
+    <p id="demo"></p>
+    <p id="objetoComplejo"></p>
+    
+
+    <script>
+      var persona = {
+        nombre: "John",
+        apellido: "Smith",
+        edad: 53,
+        "color ojos": "verdes",
+      };
+
+      document.getElementById("demo").innerHTML =
+        persona.nombre +
+        " tiene " +
+        persona.edad +
+        " años y tiene el color de ojos " +
+        persona["color ojos"] +
+        persona[""];
+
+      //Ejemplo de variable OBJETO con propiedades: atributos (variables) y métodos(funciones)
+      var person = {
+        //PROPIEDADES
+
+        // Atributos
+        firstName: "John",
+        lastName: "Doe", 
+        id: 5566,
+        // Método
+        fullName: function () {
+          return "El nombre es " + this.firstName + " " + this.lastName + " y su id es " + this.id;
+        }
+      };
+      document.getElementById("objetoComplejo").innerHTML = person.fullName();
+
+    </script>
+  </body>
+</html>
