@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <title>Ejercicios JavaScript</title>
-</head>
-<body>
+    <style>
+      span {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
     <h1>Ejercicios JavaScript</h1>
     <h3>Ejercicio 1:</h3>
     <p id="ejer1">Muestra el resultado aquí</p>
@@ -12,21 +17,36 @@
     <h3>Ejercicio 3:</h3>
     <p id="temp">Muestra el resultado aquí</p>
     <h3>Ejercicio 4:</h3>
-    <p id="sum">Muestra el resultado aquí</p> 
+    <p id="sum">Muestra el resultado aquí</p>
     <h3>Ejercicio 5:</h3>
     <p id="sum5">Muestra el resultado aquí</p>
     <h3>Ejercicio 6:</h3>
-    <p id= "persona">Muestra la persona y edad.</p>
+    <p id="persona">Muestra la persona y edad.</p>
     <h3>Ejercicio 7:</h3>
     <p>Es necesario cambiar el tipo string "6" por el number 6</p>
     <h3>Ejercicio 8:</h3>
     <p id="demo"></p>
     <h3>Ejercicio 9:</h3>
     <p id="mult">Aquí la multiplicación.</p>
+    <h3>Ejercicio 10:</h3>
+    <p>El evento es "onclick"</p>
+    <h3>Ejercicio 11:</h3>
+    <button onclick="saluda()">Clic</button>
+    <h3>Ejercicio 12:</h3>
+    <p>El evento es "onmouseover"</p>
+    <p id="saludo"></p>
     <h3>Ejercicio 14:</h3>
     <p id="ejer14"></p>
     <h3>Ejercicios 21-25:</h3>
-    <p id="ejer2125"></p>    
+    <p id="ejer2125"></p>
+    <h3>Ejercicios 26:</h3>
+    <p>Llamada a la función: "myFunction()"</p>
+    <h3>Ejercicios 27:</h3>
+    <p>Para que funcione la función se debe realizar el siguiente cambio:</p>
+    <p>
+      func<span>tion</span> myFunc<span>tion()</span> {
+      document.getElementById("demo").innerHTML = "Hello World!"; }
+    </p>
     <script src="../JS/ejercicio1.js"></script>
     <script src="../JS/ejercicio2.js"></script>
     <script src="../JS/ejercicio3.js"></script>
@@ -35,6 +55,7 @@
     <script src="../JS/ejercicio6.js"></script>
     <script src="../JS/ejercicio8.js"></script>
     <script src="../JS/ejercicio9.js"></script>
+    <script src="../JS/ejercicio11.js"></script>
     <script src="../JS/ejercicio14.js"></script>
     <script src="../JS/ejercicio15.js"></script>
     <script src="../JS/ejercicio16.js"></script>
@@ -43,5 +64,5 @@
     <!-- Resultado del ej19 es Math.round(5.3) equivale a 5 -->
     <!-- Resultado del ej19 es Math.sqrt(9), equivale a 3 -->
     <script src="../JS/ejercicio21-25.js"></script>
-</body>
+  </body>
 </html>
