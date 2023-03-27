@@ -7,7 +7,7 @@ y = divide(8,4);
 
 //Acciones
 document.getElementById("mult").innerHTML = "El resultado de multiplicar 4 * 3 es " + x;
-document.getElementById("mult").innerHTML = "El resultado de dividir 8 / 4 es " + y;
+document.getElementById("div").innerHTML = "El resultado de dividir 8 / 4 es " + y;
 
 
 //Funciones
