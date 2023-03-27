@@ -1,6 +1,11 @@
 //Declarar
 var x, y, z, w;
 
+const multiplicar = (a,b) => (a*b);
+const dividir = (a,b) => (a*b);
+const sumar = (a,b) => (a*b);
+const restar = (a,b) => (a*b);
+
 //Asignar
 x = multiplicar(4, 3);
 y = dividir(8, 4);
@@ -30,5 +35,3 @@ document.getElementById("res").innerHTML =
 // function restar(a, b) {
 //   return a - b;
 // }
-
-//Funciones de flecha
