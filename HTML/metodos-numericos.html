@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Métodos para los números en JS</title>
+  </head>
+  <body>
+    <h2>Métodos para los números en JS</h2>
+
+    <h3>toString() convierte número a texto.</h3>
+
+    <p id="textoNumerico"></p>
+
+    <script>
+      let x = 123;
+      console.log(x);
+      console.log("123");
+      document.getElementById("textoNumerico").innerHTML =
+        x.toString() +
+        "<br>" +
+        (123).toString() +
+        "<br>" +
+        (100 + 23).toString();
+    </script>
+
+    <h3>
+      The toExponential() method returns a string, with the number rounded and
+      written using exponential notation.
+    </h3>
+
+    <p>
+      An optional parameter defines the number of digits behind the decimal
+      point.
+    </p>
+
+    <p id="exp"></p>
+
+    <script>
+      let y = 90000.656;
+      document.getElementById("exp").innerHTML =
+        y +
+        "<br>" +
+        y.toExponential() +
+        "<br>" +
+        y.toExponential(2) +
+        "<br>" +
+        y.toExponential(4) +
+        "<br>" +
+        y.toExponential(7);
+    </script>
+
+    <h3>The valueOf() method returns a number as a number:</h3>
+
+    <p id="valueof"></p>
+
+    <script>
+      let z = 123;
+
+      document.getElementById("valueof").innerHTML =
+        z.valueOf() 
+        + "<br>" 
+        + (123).valueOf() 
+        + "<br>" 
+        + (100 + 23).valueOf();
+    </script>
+  </body>
+</html>
