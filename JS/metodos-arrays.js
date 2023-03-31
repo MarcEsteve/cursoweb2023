@@ -53,7 +53,6 @@ console.log(beasts.lastIndexOf("bison", 2)); //1
 console.log(beasts.lastIndexOf("bisdsadon")); // -1
 console.log(beasts.lastIndexOf("duck", 2)); // -1
 
-
 //Bucle FOR..OF para arrays
 const frutas = ["Banana", "Orange", "Apple", "Mango"];
 const lon = frutas.length;
@@ -64,4 +63,13 @@ for (let i = 0; i < lon; i++) {
 // for...of
 for (let fruta of frutas) {
   console.log(fruta);
+}
+
+
+//prompt() método global JavaScript
+
+let persona = prompt("Please enter your name", "Harry Potter");
+if (persona != null) {
+  document.getElementById("persona").innerHTML =
+    "Hola " + persona + "! Vamos al descanso?";
 }
