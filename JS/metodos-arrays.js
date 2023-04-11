@@ -65,7 +65,6 @@ for (let fruta of frutas) {
   console.log(fruta);
 }
 
-
 //prompt() método global JavaScript
 
 let persona = prompt("Please enter your name", "Harry Potter");
