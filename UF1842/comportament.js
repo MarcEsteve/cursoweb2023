@@ -8,6 +8,9 @@ function rojo() {
     document.getElementById("titol").style.color="red";
 }
 
-function nombre3() {}
+// Actividad 5
+function cambiar() {
+    document.getElementById("canvia").innerHTML = "Exercici 5 resolt";
+}
 
 //Ejercicio 3 era crear las 3 funciones vacias inicialmente
