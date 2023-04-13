@@ -1,5 +1,9 @@
-function nombre1() {}
+function agranda() {
+    document.getElementById("paragraf").style.fontSize="35px";
+}
 
-function nombre2() {}
+function rojo() {
+    document.getElementById("titol").style.color="red";
+}
 
 function nombre3() {}
