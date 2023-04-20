@@ -6,7 +6,7 @@
       name="description"
       content="En este documento vamos a aplicar técnicas de accessibilidad web sobre HTML, CSS y JavaScript"
     />
-    <link rel="stylesheet" href="../CSS/accesibilidad.css">
+    <link rel="stylesheet" href="../CSS/accesibilidad.css" />
   </head>
   <body>
     <div></div>
@@ -173,7 +173,14 @@
       <p>Este es el pie de página.</p>
     </footer>
     <h3>Ejemplo botón con animación accesible</h3>
-    <button id="anim-button" onclick="animateButton()">Haz clic para animar</button>
+    <button id="anim-button" onclick="animateButton()">
+      Haz clic para animar
+    </button>
+    <h3>Ejemplo de parpadeo no accesible</h3>
+    <img id="blinking-gif" src="../IMG/no-accesible.gif" alt="GIF animado" />
+
+    <button onclick="toggleBlinking()">Parpadear GIF</button>
+
     <script src="../JS/accesibilidad.js"></script>
   </body>
 </html>
