@@ -1,19 +1,145 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="en">
+  <head>
     <title>Ejemplos de aplicación de accessibilidad</title>
-    <meta name="description" content="En este documento vamos a aplicar técnicas de accessibilidad web sobre HTML, CSS y JavaScript">
-</head>
-<body>
+    <meta
+      name="description"
+      content="En este documento vamos a aplicar técnicas de accessibilidad web sobre HTML, CSS y JavaScript"
+    />
+    <style>
+      /* Definimos un estilo CSS para nuestros contenedores */
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      /* Definimos un estilo CSS para nuestras tarjetas */
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        width: calc(
+          33.33% - 10px
+        ); /* Ajustamos el ancho de las tarjetas en función del número de elementos */
+      }
+
+      /* Hacemos que las tarjetas ocupen el 100% del ancho en pantallas pequeñas */
+      @media only screen and (max-width: 768px) {
+        .card {
+          width: 100%;
+        }
+      }
+
+      /* Ajustamos el número de tarjetas por fila en pantallas muy pequeñas */
+      @media only screen and (max-width: 480px) {
+        .card {
+          width: 100%;
+        }
+        .container {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
     <h1>Ejemplos de aplicación de accessibilidad</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio, odio atque, id laudantium libero, vero itaque harum fugiat accusantium. Voluptatibus aspernatur eligendi nisi magni, ex asperiores soluta sunt?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio, odio atque, id laudantium libero, vero itaque harum fugiat accusantium. Voluptatibus aspernatur eligendi nisi magni, ex asperiores soluta sunt?</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis
+      distinctio, odio atque, id laudantium libero, vero itaque harum fugiat
+      accusantium. Voluptatibus aspernatur eligendi nisi magni, ex asperiores
+      soluta sunt?
+    </p>
+    <p lang="ca">Aquest paràgraf està en català</p>
     <h2>Algunas técnicas</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio, odio atque, id laudantium libero, vero itaque harum fugiat accusantium. Voluptatibus aspernatur eligendi nisi magni, ex asperiores soluta sunt?</p>
+    <a href="enlace.html" target="_blank" rel="noopener noreferrer">Enlace1</a>
+    <img
+      src="../IMG/accesibilidad.png"
+      alt="Infografia que ilustra 4 casos generales de accesibilidad web"
+    />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis
+      distinctio, odio atque, id laudantium libero, vero itaque harum fugiat
+      accusantium. Voluptatibus aspernatur eligendi nisi magni, ex asperiores
+      soluta sunt?
+    </p>
+    <h3>Formulario con submit en el botón</h3>
     <form action="" method="get">
-        <label>Nombre:</label> 
-        <input type="text" name="nombre" id="">
-        <button type="submit">Enviar</button>
+      <label>Nombre:</label>
+      <input type="text" name="nombre" id="" />
+      <button type="submit">Enviar</button>
     </form>
-</body>
+    <h3>Tabla con caption descriptivo de la tabla</h3>
+    <table style="background-color: #f9c1c1">
+      <tr>
+        <th>Mes</th>
+        <th>Ahorros</th>
+        <th>Mes</th>
+        <th>Ahorros</th>
+      </tr>
+      <tr>
+        <td>Enero</td>
+        <td>100</td>
+        <td>Enero</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>Febrero</td>
+        <td>80</td>
+        <td>Febrero</td>
+        <td>80</td>
+      </tr>
+      <caption>
+        Ejemplo de caption para las tablas
+      </caption>
+    </table>
+    <a href="enlace2.html" target="_blank" rel="noopener noreferrer">Enlace2</a>
+    <h3>Elementos details con summary</h3>
+    <details>
+      <summary>Información importante</summary>
+      <p>
+        Esta es la información importante que se muestra cuando se hace clic en
+        el resumen.
+      </p>
+    </details>
+
+    <details>
+      <summary>Otra sección</summary>
+      <p>
+        Esta es otra sección que se puede expandir o contraer haciendo clic en
+        el resumen.
+      </p>
+    </details>
+    <a href="enlace3.html" target="_blank" rel="noopener noreferrer">Enlace3</a>
+    <h3>Maquetación del contenido sin tablas</h3>
+    <div class="container">
+      <div class="card">
+        <h2>Elemento 1</h2>
+        <p>Contenido del elemento 1</p>
+      </div>
+      <div class="card">
+        <h2>Elemento 2</h2>
+        <p>Contenido del elemento 2</p>
+      </div>
+      <div class="card">
+        <h2>Elemento 3</h2>
+        <p>Contenido del elemento 3</p>
+      </div>
+      <div class="card">
+        <h2>Elemento 4</h2>
+        <p>Contenido del elemento 4</p>
+      </div>
+      <div class="card">
+        <h2>Elemento 5</h2>
+        <p>Contenido del elemento 5</p>
+      </div>
+      <div class="card">
+        <h2>Elemento 6</h2>
+        <p>Contenido del elemento 6</p>
+      </div>
+    </div>
+    <a href="enlace4.html" target="_blank" rel="noopener noreferrer">Enlace4</a>
+  </body>
 </html>
