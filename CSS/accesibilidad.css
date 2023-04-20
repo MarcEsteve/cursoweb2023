@@ -1,0 +1,198 @@
+/* Definimos un estilo CSS para nuestros contenedores */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Definimos un estilo CSS para nuestras tarjetas */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: calc(
+    33.33% - 10px
+  ); /* Ajustamos el ancho de las tarjetas en función del número de elementos */
+}
+
+/* Hacemos que las tarjetas ocupen el 100% del ancho en pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+
+/* Ajustamos el número de tarjetas por fila en pantallas muy pequeñas */
+@media only screen and (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
+/* Estilos para el encabezado */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+h1 {
+  margin: 0;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para las secciones */
+main {
+  padding: 10px;
+}
+section {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+h2 {
+  margin-top: 0;
+}
+ul {
+  list-style: disc;
+  margin: 0 0 10px 20px;
+}
+ol {
+  list-style: decimal;
+  margin: 0 0 10px 20px;
+}
+table {
+  border-collapse: collapse;
+  margin: 0 0 10px 0;
+  width: 100%;
+}
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: left;
+}
+th {
+  background-color: #eee;
+  font-weight: bold;
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #ccc;
+  color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Estilos base para los botones */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos para botones de acción */
+button.action {
+  color: #fff;
+  background-color: #0074d9;
+}
+
+button.action:hover,
+button.action:focus {
+  background-color: #005ea3;
+}
+
+/* Estilos para botones de confirmación */
+button.confirm {
+  color: #fff;
+  background-color: #2ecc71;
+}
+
+button.confirm:hover,
+button.confirm:focus {
+  background-color: #27ae60;
+}
+
+/* Estilos para botones de alerta */
+button.alert {
+  color: #fff;
+  background-color: #e74c3c;
+}
+
+button.alert:hover,
+button.alert:focus {
+  background-color: #c0392b;
+}
+
+/* Estilos para botones de información */
+button.info {
+  color: #fff;
+  background-color: #3498db;
+}
+
+button.info:hover,
+button.info:focus {
+  background-color: #2980b9;
+}
+
+/* Estilos para botones de desactivados */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Estilos para botones enfocados */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #0074d9;
+}
+
+/* Más sobre button accesible */
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #0074d9;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover,
+button:focus {
+  background-color: #005ea3;
+}
+
+button:active {
+  transform: translateY(2px);
+}
