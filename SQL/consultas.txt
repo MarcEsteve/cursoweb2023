@@ -1,0 +1,6 @@
+Realizar una consulta que muestre todos los campos de la tabla CLIENTES.
+Ordenar los resultados por el campo POBLACIÓN ascendentemente.
+
+SELECT *
+FROM CLIENTES 
+ORDER BY POBLACIÓN ASC
