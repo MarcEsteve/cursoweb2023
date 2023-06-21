@@ -1,6 +1,10 @@
-Realizar una consulta que muestre todos los campos de la tabla CLIENTES.
-Ordenar los resultados por el campo POBLACIÓN ascendentemente.
+3. Realizar una consulta visualizando los campos NOMBRE ARTÍCULO, SECCIÓN, PRECIO de
+la tabla PRODUCTOS y un campo nuevo que nombramos con el texto “PRECIO_AUMENTADO_EN_2”. Debe mostrar el PRECIO con un incremento de un 2% del
+PRECIO. Sólo debemos tener en cuenta los registros de la sección FERRETERÍA. El nuevo
+campo debe aparecer en Euros y con 2 lugares decimales.
 
-SELECT *
-FROM CLIENTES 
-ORDER BY POBLACIÓN ASC
+SELECT NOMBREARTÍCULO, SECCIÓN, PRECIO, CONCAT(ROUND(PRECIO*1.02,2), ' €') AS PRECIO_AUMENTADO_EN_2 FROM PRODUCTOS WHERE SECCIÓN="FERRETERÍA";
+
+ROUND(PRECIO*1.02,2) & " €" 
+
+FORMAT(PRECIO*1.02, "Currency")
