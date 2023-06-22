@@ -1,3 +1,20 @@
-UPDATE productos SET IMPORTADO='TRUE' WHERE CÓDIGOARTÍCULO='AR42'; 
+Ejercicio:
+Busca la media de precios de Deportes y muestra los precios que sean mayores que esa media
 
-UPDATE productos SET IMPORTADO='TRUE',PAÍSDEORIGEN ="TAILANDIA" WHERE CÓDIGOARTÍCULO='AR42'; 
+Primero consulta "padre":
+
+SELECT SECCIÓN, NOMBREARTÍCULO, PRECIO 
+FROM productos 
+WHERE PRECIO > (???MEDIA*);
+
+Consulta "hijo" para encontrar la media de ferretería:
+
+SELECT AVG(PRECIO) 
+FROM productos
+WHERE SECCIÓN='DEPORTES';
+
+SELECT SECCIÓN, NOMBREARTÍCULO, PRECIO 
+FROM productos 
+WHERE PRECIO > (SELECT AVG(PRECIO) 
+FROM productos
+WHERE SECCIÓN='DEPORTES');
