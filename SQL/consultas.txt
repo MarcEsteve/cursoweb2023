@@ -1,20 +1,9 @@
-Ejercicio:
-Busca la media de precios de Deportes y muestra los precios que sean mayores que esa media
+Busca la lista de artículos de confección (lista) Los artículos de ESPAÑA que sean PRECIO mayor que ANY, ALL  o menor que ANY, ALL de esta lista.
 
-Primero consulta "padre":
+Lista de confección nos da el mínimo en 4 y el máximo en 500k
 
-SELECT SECCIÓN, NOMBREARTÍCULO, PRECIO 
-FROM productos 
-WHERE PRECIO > (???MEDIA*);
+Menor de españa es 4 y mayor 250 €
 
-Consulta "hijo" para encontrar la media de ferretería:
-
-SELECT AVG(PRECIO) 
-FROM productos
-WHERE SECCIÓN='DEPORTES';
-
-SELECT SECCIÓN, NOMBREARTÍCULO, PRECIO 
-FROM productos 
-WHERE PRECIO > (SELECT AVG(PRECIO) 
-FROM productos
-WHERE SECCIÓN='DEPORTES');
+SELECT *
+FROM PRODUCTOS
+WHERE PAÍSDEORIGEN='ESPAÑA' AND PRECIO < ALL (SELECT PRECIO FROM PRODUCTOS WHERE SECCIÓN='CONFECCIÓN'); 
