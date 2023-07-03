@@ -1,0 +1,10 @@
+1. BBDD? c) Conjunt estructurat info, dades relacionades
+2. Lenguatges SGBD (DBMS) b) Data Definition Language (DDL) i DML Data Manipulation Language
+3. SQL? c) Llenguatge de consulta estruturada!!!
+4. Ordre escritura SQL? d) Comandes + Cláusules FROM, WHERE, GROUP BY, HAVING, ORDER BY
+5. CRUD? a) Crear, Leer, Actualizar y borrar/eliminar
+6. "SELECT NOMBREARTÍCULO, SECCIÓN, PRECIO, ROUND(PRECIO*1.02, 2) AS PRECIO_AUMENTADO_EN_2 FROM PRODUCTOS WHERE SECCIÓN='FERRETERÍA'; ? d) 2% añadido al PRECIO
+7. Plugins sociales WP? a) Nelio de la web a RRSS y Twitter Feeds al revés, trae los tweets a tu web.
+8. Plugins COOKIES? c) Informar y consentimiento
+9. Plugins Seguridad? d) FireWall, HideLogin, LimitLogin
+10. KPI GA? d) Visita que hace en la primera página, se va 100% rebote, se queda 0%, tiempo medio sesión: cuanto se quedan?

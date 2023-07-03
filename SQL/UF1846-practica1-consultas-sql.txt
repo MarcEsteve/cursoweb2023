@@ -1,0 +1,65 @@
+1. Realitzar una consulta de la taula PRODUCTOS que mostri els camps "PRECIO" i "NOMBRE de ARTÍCULO" i només els productes de la secció "Deportes" el preu del qual sigui superior a 50 i inferior a 150. Ordena els valors del més gran al més petit pel preu.
+
+SELECT PRECIO, NOMBREARTÍCULO FROM PRODUCTOS WHERE SECCIÓN='DEPORTES' AND PRECIO>50 AND PRECIO<150 ORDER BY PRECIO DESC;
+
+2. Realitzar una consulta amb els camps NOMBRE ARTÍCULO i PRECIO de la taula PRODUCTOS i en un camp nou que anomenem "DTO5". Ha de mostrar el resultat d’aplicar sobre el camps PRECIO el descompte del 5% amb format 2 decimals, només sobre els articles de la secció OFICINA.
+
+SELECT NOMBREARTÍCULO, PRECIO, ROUND(PRECIO*0.05,2) AS DTO5 FROM PRODUCTOS WHERE SECCIÓN='OFICINA';
+
+3. Realitzar una consulta que mostri els productes amb data entre 1/05/2001 i 15/12/2001. A la consulta només es visualitzarà els camps "Nombre de artículo", "Sección" i "Fecha". I no apareixeran ni la secció "Ferreteria" ni la secció "Confección". Ordenar els resultats pel camps "Sección" descendentement i després el camp "Precio" ascendentment.
+
+MySQL
+SELECT NOMBREARTÍCULO, SECCIÓN, FECHA FROM PRODUCTOS 
+WHERE  FECHA BETWEEN '2001-05-01' AND '2001-12-15'
+AND
+(SECCIÓN<>'FERRETERÍA' OR SECCIÓN<>'CONFECCIÓN')
+ORDER BY SECCIÓN DESC, PRECIO;
+
+ACCESS
+SELECT NOMBREARTÍCULO, SECCIÓN, FECHA FROM PRODUCTOS 
+WHERE (SECCIÓN<>'FERRETERÍA' OR SECCIÓN<>'CONFECCIÓN') AND FECHA BETWEEN #05/02/2001# AND #12/15/2001#
+ORDER BY SECCIÓN DESC, PRECIO;
+
+4. Realitzar una consulta d'agrupació que mostri la mitja del preu i de totes les seccions menys "Juguetería". A la consulta hauran d’apareixer els camps "Sección" i "Media por sección" i ordenar ascendentment per aquest últim.
+
+SELECT SECCIÓN, AVG(PRECIO) AS MEDIA_POR_SECCIÓN FROM PRODUCTOS
+WHERE SECCIÓN<>'JUGUETERÍA'
+GROUP BY SECCIÓN
+ORDER BY MEDIA_POR_SECCIÓN;
+-->El orden por media en ACCESS se debe poner el cálculo de la media, no el alias porque no lo reconoce
+MEDIA_POR_SECCIÓN --> AVG(PRECIO)
+
+5. Busca la llista de preus de "DEPORTES" i mostra els preus d’ITALIA que siguin menors que TOTS d’aquesta llista
+
+SELECT NOMBREARTÍCULO, PRECIO FROM PRODUCTOS WHERE PAÍSDEORIGEN='ITALIA' AND PRECIO <ALL (SELECT PRECIO FROM PRODUCTOS WHERE SECCIÓN='DEPORTES');
+
+6. Després majors que QUALSEVOL de l’exercici 5.
+
+SELECT NOMBREARTÍCULO, PRECIO FROM PRODUCTOS WHERE PAÍSDEORIGEN='ITALIA' AND PRECIO >ANY (SELECT PRECIO FROM PRODUCTOS WHERE SECCIÓN='DEPORTES');
+
+7. Suma-li l'IVA del 21% als articles de Confecció
+
+SELECT *, PRECIO+PRECIO*0.21 AS PRECIO_CON_IVA 
+FROM PRODUCTOS
+WHERE SECCIÓN='CONFECCIÓN';
+
+UPDATE PRODUCTOS 
+SET PRECIO=PRECIO*1.21
+WHERE SECCIÓN='CONFECCIÓN';
+
+8. Crea una nova taula que es digui "PEDIDOS_CONTADO" i extreu els registres de la taula PEDIDOS dels pagaments que son al comptat.
+
+ACCESS:
+SELECT * INTO PEDIDOS_CONTADO FROM PEDIDOS WHERE [FORMA DE PAGO]='CONTADO' 
+
+MYSQL
+CREATE TABLE PEDIDOS_CONTADO SELECT * FROM PEDIDOS WHERE `FORMA_DE_PAGO`='CONTADO'
+
+9. Realitza, però no executis, una consulta que elimini els clients que siguin de MADRID.
+
+DELETE FROM CLIENTES 
+WHERE POBLACIÓN= 'MADRID';
+
+10. Realitza una inserció d’un registre nou a la taula PRODUCTOS inventant les dades d’un producte nou per exemple de la secció DEPORTES.
+
+INSERT INTO `productos` (`CÓDIGOARTÍCULO`, `SECCIÓN`, `NOMBREARTÍCULO`, `PRECIO`, `FECHA`, `IMPORTADO`, `PAÍSDEORIGEN`, `FOTO`) VALUES ('AR86', 'DEPORTES', 'PADDLE SURF', '250.00', '01/05/2023', NULL, 'ESPAÑA', NULL);
